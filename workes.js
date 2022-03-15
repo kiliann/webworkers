@@ -1,0 +1,10 @@
+'use strict'
+
+const urlApi = "https://www.random.org/integers/?num=10&min=1&max=6&col=1&base=10&format=plain&rnd=new";
+this.onmessage = setInterval((e)=>{
+    fetch(urlApi)
+        .then(reponse =>reponse.text())
+        .then(data =>{postMessage(data)
+
+        })
+},3000)
